@@ -34,6 +34,7 @@
 
 ;;; Code:
 (defun smart-backspace (arg)
+  "Command for backspace like intellij idea"
   (interactive "P")
   (let* ((current (point))
          (beginning (save-excursion
