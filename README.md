@@ -12,7 +12,7 @@ class Some {
   }
 }
 ```
-↓ And press `smart-backspace` command once
+↓ press `smart-backspace` command once
 ```
 class Some {
   
