@@ -28,8 +28,9 @@
 
 ;; set keybindings for smart-backspace
 ;; example
+;;   (global-set-key [?\C-?] 'smart-backspace)
+;; for evil user
 ;;   (define-key evil-insert-state-map [?\C-?] 'smart-backspace)
-;;   (define-key key-translation-map [?\C-h] [?\C-?])
 
 ;;; Code:
 (defun smart-backspace (arg)
