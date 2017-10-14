@@ -1,15 +1,16 @@
-;;; -*-coding: utf-8 -*-
-;;; smart-backspace.el intellj like backspace
+;;; smart-backspace.el --- intellj like backspace
 
 ;; Copyright (C) 2017  takeshi tsukamoto
 
-;; Author: George Kettleborough <g.kettleborough@member.fsf.org>
 ;; Author: Takeshi Tsukamoto <t.t.itm.0403@gmail.com>
+;; URL: https://github.com/itome/smart-backspace
 ;; Created: 20171012
 ;; Version: 0.1.0
 ;; Status: experimental
 
 ;; This file is not part of GNU Emacs.
+
+;;; Commentary:
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -33,9 +34,16 @@
 ;;   (define-key evil-insert-state-map [?\C-?] 'smart-backspace)
 
 ;;; Code:
-(defun smart-backspace (arg)
-  "Command for backspace like intellij idea"
-  (interactive "P")
+(defun smart-backspace (n &optional killflag)
+  "This function provides intellij like backspace.
+Delete the backword-char usually and delete whitespace
+to previous line indentation if it's start of line.
+If a prefix argument is giben, delete the following N characters.
+
+Optianal second arg KILLFLAG non-nil means to kill (save in killring)
+instead of delete. Interactively, N is the prefix arg, and KILLFLAG
+is set if N was explicitly specified."
+  (interactive "p\nP")
   (let* ((current (point))
          (beginning (save-excursion
                       (beginning-of-line)
@@ -43,9 +51,9 @@
     (if (string-match "^[ \t]*$" (buffer-substring beginning current))
         (progn
           (kill-line 0)
-          (delete-backward-char 1)
+          (delete-char n killflag)
           (indent-according-to-mode))
-      (delete-backward-char 1))))
+      (delete-char 1))))
 
 (provide 'smart-backspace)
 ;;; smart-backspace.el ends here
