@@ -31,6 +31,12 @@ class Some {
 ## Installation
 package can be available in melpa. just `M-x` `package-install` `smart-backspace` and bind `smart-backspace`
 #### set keybinds to your favorite key.
-`(global-set-key [?\C-?] 'smart-backspace)`
+```
+(require 'smart-backspace)
+(global-set-key [?\C-?] 'smart-backspace)
+```
 #### for evil users
-`(define-key evil-insert-state-map [?\C-?] 'smart-backspace)`
+```
+(require 'smart-backspace)
+(define-key evil-insert-state-map [?\C-?] 'smart-backspace)
+```
