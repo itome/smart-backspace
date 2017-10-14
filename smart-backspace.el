@@ -53,7 +53,7 @@ is set if N was explicitly specified."
           (kill-line 0)
           (delete-char n killflag)
           (indent-according-to-mode))
-      (delete-char 1))))
+      (delete-char n killflag))))
 
 (provide 'smart-backspace)
 ;;; smart-backspace.el ends here
