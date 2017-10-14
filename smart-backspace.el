@@ -51,9 +51,9 @@ is set if N was explicitly specified."
     (if (string-match "^[ \t]*$" (buffer-substring beginning current))
         (progn
           (kill-line 0)
-          (delete-char n killflag)
+          (delete-char (- n) killflag)
           (indent-according-to-mode))
-      (delete-char n killflag))))
+      (delete-char (- n) killflag))))
 
 (provide 'smart-backspace)
 ;;; smart-backspace.el ends here
