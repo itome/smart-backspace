@@ -1,5 +1,5 @@
 # Smart backspace
-[![MELPA](https://melpa.org/packages/smart-backspace-budge.svg)](https://melpa.org/#/smart-backspace)
+[![MELPA](https://melpa.org/packages/smart-backspace-badge.svg)](https://melpa.org/#/smart-backspace)
 [![Emacs](https://img.shields.io/badge/Emacs-25-8e44bd.svg)](https://www.gnu.org/software/emacs/)
 
 A simple package to enable intellij like backspace in Emacs.
