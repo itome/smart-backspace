@@ -29,7 +29,7 @@ class Some {
 ```
 
 ## Installation
-package can be available in melpa. just `M-x``package-install``smart-backspace` and bind `smart-backspace`
+package can be available in melpa. just `M-x` `package-install` `smart-backspace` and bind `smart-backspace`
 #### set keybinds to your favorite key.
 `(global-set-key [?\C-?] 'smart-backspace)`
 #### for evil users
